@@ -5,6 +5,75 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>WMAA OZAMIZ ADMISSION</title>
 <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.div1{
+    width: cover;
+    margin:auto;
+    margin: 10 0 0 450px;
+    overflow: hidden;
+    padding: 75px;
+    background: #1f0549;
+
+}
+.div2{background-color: yellow;}/*yellow*/
+label{
+    color: white;
+    padding-left: 10px;
+}
+
+.inputText{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    padding-left: 8px;
+}
+
+#logButtone{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 7px;
+    color: rgba(253, 238, 30, 0.918);
+    font-size: 16px;
+    padding-left: 100px;
+    cursor: pointer;  
+}
+
+img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    text-align: center;
+}
+
+.row {
+    padding: 0 8px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-left: 100px;
+
+}
+
+#footer {
+	height: 110px;
+  width: 878;
+	background: url(https://iili.io/oTCwla.png) no-repeat;
+	background-size: contain;
+	margin-top: 0;
+  position: relative;
+  text-align: center;
+}
+
+</style>
 </head>
 <body>
 <div id="wrapper">
@@ -13,53 +82,74 @@
       
     </div>
   </div>
-  <div id="nav"> <a href="index.html">HOME</a> <a href="about.html">ABOUT US</a> <a href="admission.html">ADMISSION</a> <a href="faculty&staff.html">FACULTY & STAFF</a><a href="ebulletin.html">E-BULLETIN</a><a href="contact.html">CONTACT US</a></div>
+  <div id="nav"> <a href="index.html">HOME</a> <a href="#">ABOUT US</a> <a href="#">ADMISSION</a> <a href="#">FACULTY & STAFF</a><a href="#">E-BULLETIN</a><a href="#">CONTACT US</a></div>
   <!--navigation end here!-->
   
   <img src="https://iili.io/oT6Pdx.png" alt="Thumbnail" height="1" width="1">
-  <br>
-  <br>
+
   <h1 style="text-align: center;"><b>SITE UNDERDEVELOPED>> </b></h1>
   <hr>
-  <br>
+   <p style="text-align: center;"><img src="https://iili.io/oTPtyl.png" alt="finger" height="200" width="300" /></a>
+  <p style="text-align:center;" ><a href="#"><img src="https://iili.io/oTPUTN.png" alt="enrollmenttracker" width="400" height="100" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" /></a>
+  
+  <!--enrollmenttracker.html-->
+            
+    </div>
+          <!--STEM Modal-->
+          <div class="container">
+            <br><br>
+            <br><br>
+            <!-- Trigger the modal with a button -->
+                     
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                    
+                    <div class="div1">
+                        <img src="https://iili.io/oITa49.png" alt="Logo" style="width:200px">
+                        <h3 style="color: yellow;">WMA ACADEMY OZAMIZ</h3>
+                        <h5 style="color: yellow;"><b>Log in Required</b><br>In recognition to Republic Act 10173 or Data Privacy Act of 2012</h5>
+                        <form name="myForm" method="post">
+                            <label>Username</label>
+                            <input type="text" name="Uname" class="inputText" placeholder="Username">
+                            <br><br>
+                            <label>Password</label>
+                            <input type="password" name="Pass" class="inputText" placeholder="Password">
+                            <br><br>
+                            <input type="button" name="log" id="logButton" value="Login" onclick="myFunction()">
+                            <br><br>
+                            
+                        </form>
+                        <script>
+                            function myFunction()
+                            {
+                                var un = document.forms["myForm"]["Uname"].value;
+                                var pw = document.forms["myForm"]["Pass"].value;
+                                if(un=="wmaa" && pw=="409946")
+                                {
+                                    window.location.href="enrollmenttracker.html";
+                                }
+                                else{
+                                    alert("Invalid Username and Password");
+                                }
+                    
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
 
-  <p style="text-align: center;"><img src="https://iili.io/oTPtyl.png" alt="finger" height="300" width="400" /></a>
-  <p style="text-align:center;"><a href="enrollmenttracker.html"><img src="https://iili.io/oTPUTN.png" alt="enrollmenttracker" width="600" height="200"/></a>
   </p>
   <br>
-  <br>
-  <br>
-  <img src="https://iili.io/oTCwla.png" alt="footer" width="878" border="0" /></a>
-  
+
+  <div id="footer">
+    
   </div>
 </div>
-<!-- Start of Async Drift Code -->
-<script>
-  "use strict";
-  
-  !function() {
-    var t = window.driftt = window.drift = window.driftt || [];
-    if (!t.init) {
-      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-      t.factory = function(e) {
-        return function() {
-          var n = Array.prototype.slice.call(arguments);
-          return n.unshift(e), t.push(n), t;
-        };
-      }, t.methods.forEach(function(e) {
-        t[e] = t.factory(e);
-      }), t.load = function(t) {
-        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-        var i = document.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(o, i);
-      };
-    }
-  }();
-  drift.SNIPPET_VERSION = '0.3.1';
-  drift.load('u32kpg3zsvem');
-</script>
-  <!-- End of Async Drift Code -->
 </body>
 </html>
